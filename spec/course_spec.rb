@@ -36,4 +36,14 @@ RSpec.describe Course do
     expect(@course.students).to eq([student1, student2])
   end
 
+  it 'the course can reach capacity' do
+    student1 = Student.new({name: "Morgan", age: 21})
+    student2 = Student.new({name: "Jordan", age: 29}) 
+
+    @course.enroll(student1)
+    @course.enroll(student2)
+
+    expect(@course.full?).to eq true
+  end
+
 end
