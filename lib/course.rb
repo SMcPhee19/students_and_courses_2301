@@ -1,8 +1,7 @@
 class Course
   attr_reader :name,
-              :capacity,
-              :students
-
+              :capacity
+  attr_accessor :students
   def initialize(name, capacity)
     @name = name
     @capacity = capacity
